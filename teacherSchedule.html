@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>老师课表</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stu-schedule.css" />
+</head>
+<body>
+    <!-- 共用老师端-->
+    <div class="teach-my-schedule">
+        <div class="teach-my-title">我的课表<i></i></div>
+
+        <!-- 选择教室弹窗-->
+        <div class="mask" style="display:none"></div>
+        <div class="select-room-box" style="display:none">
+            <div class="select-room-list">
+                <p>我的课表<span class="checked-icon active me"></span></p>
+                <p>班级课表<i class="arror-icon"></i></p>
+                <div class="select-room-list-part2" style="display:none">
+                    <div><span>高一</span><span class="active">高二</span><span>高三</span></div>
+                    <ul style="display:none" class="classList">
+                        <li><i class="checked-icon"></i>01班</li>
+                        <li><i class="checked-icon"></i>02班</li>
+                        <li><i class="checked-icon"></i>03班</li>
+                        <li class="active"><i class="checked-icon"></i>04班</li>
+                        <li><i class="checked-icon"></i>01班</li>
+                        <li><i class="checked-icon"></i>02班</li>
+                        <li><i class="checked-icon"></i>03班</li>
+                        <li><i class="checked-icon"></i>04班</li>
+                        <li><i class="checked-icon"></i>01班</li>
+                        <li><i class="checked-icon"></i>02班</li>
+                        <li><i class="checked-icon"></i>03班</li>
+                        <li><i class="checked-icon"></i>04班</li>
+                        <li><i class="checked-icon"></i>01班</li>
+                        <li><i class="checked-icon"></i>02班</li>
+                        <li><i class="checked-icon"></i>03班</li>
+                        <li><i class="checked-icon"></i>04班</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--日课表-->
+    <section class="date-schedule" >
+        <!-- 日期选择-->
+        <nav class="schedule-nav schedule-navv ">
+            <span class="prev"><img src="images/left-ic-past.jpg"/></span>
+            <div class="date-change">
+                <ul>
+                    <li>11日</li>
+                    <li>12日</li>
+                    <li class="active">13日</li>
+                    <li>14日</li>
+                    <li>15日</li>
+                </ul>
+            </div>
+           <span class="next"><img src="images/right-ic-next.jpg"/></span>
+        </nav>
+        <p class="schedule-date">2017/09/16  周一</p>
+        <div class="morning-schedule">
+            <ul>
+                <li><i class="node-icon"></i><span>07:30-08:15</span><span>第一节</span><span>语文（高一·3班）</span></li>
+                <li><i class="node-icon"></i><span>09:30-10:15</span><span>第二节</span><span>语文（高一·3班）</span></li>
+                <li><i class="node-icon"></i><span>09:30-10:15</span><span>第三节</span><span>语文（高一·3班）</span></li>
+                <li><i class="node-icon"></i><span>09:30-10:15</span><span>第四节</span><span>语文（高一·3班）</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!--周课表-->
+    <section class="week-schedule" style="display: none">
+        <table class="schedule-table schedule-table-teacher am">
+            <thead>
+                <tr><th>上午</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th></tr>
+            </thead>
+            <tbody>
+                <!--<tr><td>7:30~8:15</td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td></tr>
+                <tr><td>7:30~8:15</td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td></tr>
+                <tr><td>7:30~8:15</td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td></tr>
+                <tr><td>7:30~8:15</td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td></tr>-->
+            </tbody>
+        </table>
+        <table class="schedule-table schedule-table-teacher margin-bottom pm">
+            <thead>
+            <tr><th>下午</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th></tr>
+            </thead>
+            <tbody>
+            <!--<tr><td>7:30~8:15</td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td></tr>
+            <tr><td>7:30~8:15</td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td></tr>
+            <tr><td>7:30~8:15</td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td></tr>
+            <tr><td>7:30~8:15</td><td></td><td></td><td><span>高三</span><span>2班</span></td><td></td><td><span>高三</span><span>2班</span></td><td><span>高三</span><span>2班</span></td><td></td></tr>-->
+
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 日课表和周课表切换-->
+    <div class="change-menu">
+        <span class="date active">日课表</span>
+        <span class="week">周课表</span>
+    </div>
+
+    <section>
+        <div class="maskk"></div>
+        <div class="no-access">
+            <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+        </div>
+    </section>
+    
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/teacherSchedule.js"></script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>选修筛选课程</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stu-setting.css" />
+</head>
+<body>
+    <!--选修筛选课程-->
+    <section class="screen-course" >
+        <div class="screen-begin-box">
+        <p class="screen-begin">选择筛选</p>
+        <div>
+            <ul class="six-choose-three">
+                <li><input name="subject" type="checkbox" value="" />物理</li>
+                <li><input name="subject" type="checkbox" value="" />化学</li>
+                <li><input name="subject" type="checkbox" value="" />生物</li>
+                <li><input name="subject" type="checkbox" value="" />政治</li>
+                <li><input name="subject" type="checkbox" value="" />历史</li>
+                <li><input name="subject" type="checkbox" value="" />地理</li>
+            </ul>
+            <div class="error-info"></div>
+        </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="screen-after">筛选后组合</div>
+        <div class="screen-after-box">
+           <div class="screen-after-list">
+                <!--<p><span>物理</span>+<span>化学</span>+<span>生物</span>&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+                <!--<p>历史+地理+政治&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+                <!--<p>物理+化学+生物&nbsp;（<i>11</i>/100）<span class="checked-icon active"></span></p>-->
+                <!--<p>历史+地理+政治&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+                <!--<p class="already-fill">物理+化学+生物&nbsp;（<i>100</i>/100）</p>-->
+            </div>
+        </div>
+
+        <!-- 提交选课-->
+        <!--<div class="submit-choose-course">-->
+            <!--<span>提交选课</span>-->
+        <!--</div>-->
+
+        <!-- 弹窗提醒-->
+        <div class="mask" style="display: none"></div>
+        <div class="warming-box" style="display: none">
+            <div class="warming-box-head"><span>温馨提示</span></div>
+            <p>选修课只能选一次，不能重选请确认您的选课组合</p>
+            <h2>化学+历史+地理</h2>
+            <div class="warming-btn-group">
+                <span class="btn-reelect">重选</span>
+                <span class="btn-refer">提交</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我的选修课-->
+    <section class="my-choose-course" style="display: none">
+        <div>
+            <p>我的选修课</p>
+            <ul class="addMySelect">
+                <!--<li data-id="20"><i class="wu" ></i><span>物理</span></li>-->
+                <!--<li data-id="21"><i class="hua" ></i><span>化学</span></li>-->
+                <!--<li data-id="22"><i class="sheng"></i><span>生物</span></li>-->
+                <!--<li data-id="25"><i class="zheng" ></i><span>政治</span></li>-->
+                <!--<li data-id="23"><i class="di" ></i><span>地理</span></li>-->
+                <!--<li data-id="24"><i class="shi" ></i><span>历史</span></li>-->
+            </ul>
+        </div>
+        <div class="btn-re-selection">重新选择课程组合</div>
+    </section>
+
+    <!-- 个人和选课切换-->
+    <div class="change-menu change-role">
+        <span><a href="setting-info.html"><i class="person-icon"></i>个人</a></span>
+        <span  class="active"><i class="choiceCourse-icon"></i>选课</span>
+    </div>
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/screen-course.js"></script>
+</html>

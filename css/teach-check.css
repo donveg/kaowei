@@ -1,0 +1,621 @@
+Body {
+    width: 100%;
+    height: 100%;
+    background: #f5f6f7;
+}
+a{
+    color: #000;
+}
+/*老师考勤*/
+.schedule-navv{
+    background: #6BBBFF;
+}
+
+.teach-my-schedule{
+ position: relative;
+}
+.teach-my-title-head{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: #3699ED;
+    text-align: center;
+    color: #fff;
+}
+.teach-my-title-head i{
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/arror-bb.png")no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+}
+.class-info-list,.teach-my-title,.teach-my-title-month,.teach-my-title-term,.teach-my-title-year{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #eee;
+    padding: 0 0.8rem;
+    /*background: #fff;*/
+}
+.class-info-list label{
+    color: #999;
+}
+.class-info-list span img ,.teach-my-title span img,.teach-my-title-month span img,.teach-my-title-term span img,.teach-my-title-year span img{
+    width: 0.4rem;
+    float: right;
+    vertical-align: middle;
+    margin-top: 0.5rem;
+    /* margin-left: 5rem; */
+}
+.teach-my-schedule p{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 0.8rem;
+    font-size: 0.6rem;
+    background: #fff;
+}
+.teach-my-schedule .num{
+    width: 75%;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 0.8rem;
+    font-size: 0.6rem;
+    background: inherit;
+    display: inline-block;
+}
+.teach-my-schedule p i{
+    display: inline-block;
+    color: #3699ED;
+}
+.change-chart{
+    width: 25%;
+    height: 2rem;
+    line-height: 2rem;
+    display: inline-block;
+    /*background: #fff;*/
+    font-size:0.6rem;
+}
+.change-chart{
+    color: #3699ED;
+}
+.change-chart label{
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/ic-change.png")no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+
+}
+.no-data{
+    width: 66%;
+    margin-left: 17%;
+    padding: 5%;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    margin-top: 1rem;
+}
+.no-data-text{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.55rem;
+}
+#brokenLine{
+    width: 100%;
+    height: 14.5rem;
+    padding-left: 5%;
+}
+.be-late,.be-miss,.be-tui{
+    width: 100%;
+    border-top: 1px solid #eee;
+    display: none;
+}
+.be-late>p span,.be-miss>p span,.be-tui>p span{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 10.5rem;
+    background: url("../images/arror-tt-bb.png")no-repeat;
+    background-size: 100%;
+}
+.be-late>p span.active,.be-miss>p span.active,.be-tui>p span.active{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 10.5rem;
+    background: url("../images/arror-ss-tt.png")no-repeat;
+    background-size: 100%;
+}
+.be-late ul li,.be-miss ul li,.be-tui ul li{
+    float: left;
+    width: 20%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    text-align: center;
+    font-size: 0.6rem;
+}
+/*筛选课程颜色*/
+.screening-course p{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.screening-course p span{
+    color: #999;
+    float: right;
+}
+.screening-course p i{
+    width: 0.5rem;
+    height: 0.7rem;
+    background: url("../images/common-ic-more.png")no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+}
+.screening-course div button{
+    width: 90%;
+    height: 2rem;
+    margin-left: 5%;
+    background: #3699ED;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 0.75rem;
+    border: none;
+    outline: none;
+    margin-top: 1.5rem;
+}
+
+/*改变默认的select*/
+select.grade,select.class,select.lesson{
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 0.8rem;
+    font-size: 0.65rem;
+    color: #999;
+    outline: none;
+    background: url("../images/common-ic-more.png") no-repeat scroll right center transparent;
+    background-size: 0.4rem;
+}
+.semesterSelect,.yearChangeSelect{
+    width: 100%;
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 0.8rem;
+    font-size: 0.65rem;
+    color: #000;
+    outline: none;
+    background: url("../images/common-ic-more.png") no-repeat scroll right center transparent;
+    background-size: 0.4rem;
+}
+select::-ms-expand { display: none; }
+select.change {
+    width: 4rem;
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 0.8rem;
+    font-size: 0.72rem;
+    color: #fff;
+    outline: none;
+    background: url("../images/arror-bb.png") no-repeat scroll right center transparent;
+    background-size: 1.1rem;
+}
+select.change-status{
+    width: 3rem;
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 0.8rem;
+    font-size: 0.72rem;
+    color: #fff;
+    outline: none;
+    background: url("../images/arror-bb.png") no-repeat scroll right center transparent;
+    background-size: 1.1rem;
+}
+select.change option,select.change-status option{
+    color: #999;
+}
+/*修改考勤状态*/
+.modify-check-status-box{
+    display: none;
+}
+.search-stu-list{
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.search-stu-list input{
+    width: 80%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    display: inline-block;
+    font-size: 0.58rem;
+    background: #F5F6F7;
+    border-radius: 100px;
+    border: none;
+    margin-left: 5%;
+    outline: none;
+    padding-left: 0.8rem;
+}
+.search-stu-list img{
+    width: 5%;
+    margin-left: 4%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.be-selected-status{
+    width: 100%;
+    float: left;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.ss-resut{
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    height: 1rem;
+    line-height: 1rem;
+    display: none;
+}
+.be-selected-status p{
+    width: 92%;
+    height:2rem ;
+    line-height: 2rem;
+    margin-left: 4%;
+}
+.be-selected-status p label{
+    float: right;
+    color: #999;
+    font-size: 0.55rem;
+}
+.be-selected-status p span{
+     float: right;
+     width: 0.8rem;
+     height: 0.8rem;
+     display: inline-block;
+     background: url("../images/arror-tt-bb.png")no-repeat;
+     background-size: 100%;
+    margin-top: 0.6rem;
+    margin-left: 0.3rem;
+ }
+.be-selected-status p span.active{
+    float: right;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    background: url("../images/arror-ss-tt.png")no-repeat;
+    background-size: 100%;
+    margin-top: 0.6rem;
+    margin-left: 0.3rem;
+}
+.teach-my-title-month,.teach-my-title-term,.teach-my-title-year{
+    display: none;
+}
+.change-selected-status{
+    display: none;
+}
+.change-selected-status li{
+    width: 20%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    float: left;
+    background: #D8D8D8;
+    border-radius: 2px;
+    color: #666;
+    text-align: center;
+    margin-left: 4%;
+    margin-bottom: 0.5rem;
+    font-size: 0.58rem;
+}
+.change-selected-status li.active{
+    background: #3699ED;
+    color: #fff;
+}
+
+/*座位图*/
+.seating-chart-box{
+    width: 100%;
+    position: absolute;
+    top: 7.6rem;
+}
+.schedule-table{
+    width: 90%;
+    margin-left: 5%;
+}
+.schedule-table thead tr th{
+    width: 25%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.55rem;
+}
+.schedule-table tbody tr td{
+    width: 12.5%;
+    height: 2rem;
+    line-height: 2rem;
+}
+.schedule-table tbody tr{
+    text-align: center;
+}
+.schedule-table tbody tr td img{
+    width: 70%;
+}
+.modify-check-status{
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+.modify-check-status span{
+    width: 5.5rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    display: inline-block;
+    border: 1px solid #3699ED;
+    border-radius: 44px;
+    text-align: center;
+    color: #3699ED;
+}
+.normal-head,.late-head,.leaving-head,.miss-head{
+    width: 0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+.normal-head{
+    background: #3699ED;
+}
+.late-head{
+    background: #F3C064;
+}
+.leaving-head{
+    background: #70CBDC;
+}
+.miss-head{
+    background: #EF8790;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bbg.png");
+    background-size: 100%;
+    z-index: 9;
+}
+.modify-stu-info{
+    width: 13rem;
+    height: 13.5rem;
+    border-radius: 5px;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: #F4F4F4;
+    z-index: 10;
+}
+.modify-stu-info h2{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 2rem;
+    line-height: 2rem;
+    color: #353535;
+    font-size: 0.7rem;
+    text-align: center;
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.modify-stu-info div{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.modify-stu-info div span{
+    width: 15%;
+    height: 1rem;
+    line-height: 1rem;
+    display: inline-block;
+}
+.modify-stu-info div .time{
+    width: 60%;
+    font-size: 0.5rem;
+    color: #666;
+}
+.modify-stu-info div label{
+    width: 30%;
+    float: right;
+    display: inline-block;
+}
+.modify-stu-info h3{
+    background: #fff;
+}
+.modify-stu-info h3,.modify-stu-info p {
+    width: 100%;
+    padding-left: 5%;
+    height: 2rem;
+    line-height: 2rem;
+
+}
+.modify-stu-info div{
+    border-top: 1px solid #ccc;
+}
+.modify-stu-info p span{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.65rem;
+    display: inline-block;
+}
+.modify-stu-info p .checked-icon,.modify-stu-info div .checked-icon{
+    clear: both;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    /* margin-left: 4.5rem; */
+    float: right;
+    margin-right: 5%;
+    margin-top: 0.5rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-default.png")no-repeat;
+    background-size: 100%;
+}
+.modify-stu-info p .checked-icon,.modify-stu-info div .active{
+    clear: both;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    /* margin-left: 4.5rem; */
+    float: right;
+    margin-right: 5%;
+    margin-top: 0.5rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-pressed.png")no-repeat;
+    background-size: 100%;
+}
+.modify-stu-info div{
+    height: 2.3rem;
+    line-height: 2.3rem;
+    position: relative;
+}
+.modify-stu-info div .checked-icon{
+    position: absolute;
+    right: 0;
+    top: 0.1rem;
+}
+.modify-stu-info div .checked-icon{
+
+}
+.modify-stu-info p .active{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    /* margin-left: 4.5rem; */
+    float: right;
+    margin-right: 5%;
+    margin-top: 0.5rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-pressed.png")no-repeat;
+    background-size: 100%;
+
+}
+.maskk{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bbg.png");
+    background-size: 100%;
+    z-index: 9;
+    display: none;
+}
+.no-access{
+    width: 12rem;
+    height: 3.5rem;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 10;
+    display: none;
+}
+.no-access p{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0.5rem;
+    line-height: 1.2rem;
+}
+
+/*老师宿舍考勤*/
+.change-menu{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.10);
+    background: #fff;
+}
+.change-menu span{
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+    color: #666666;
+    font-size: 0.7rem;
+}
+.change-menu span:first-child{
+    border-right: 1px solid rgba(0,0,0,0.10);
+}
+.change-menu span.active{
+    color: #3699ED;
+}
+.change-menu span .punch-clock{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/tabbar-ic--default.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.change-menu span.active .punch-clock{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/tabbar-ic-pressed.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.change-menu span .total-punch{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/common-ic-tj-default.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.change-menu span.active .total-punch{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/common-ic-tj-pressed.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}

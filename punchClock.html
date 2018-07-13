@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stu-schedule.css" />
+</head>
+<body>
+    <!--考勤-->
+    <section class="punchClock">
+        <nav class="clock-nav">
+            <span class="nav-date">2017年10月20日&nbsp;&nbsp; 周五</span>
+            <span class="date-selected" id="date-selected"><img src="images/common-ic-date.png"></span>
+        </nav>
+        <table class="clock-table" style="display: none;">
+            <thead>
+            <tr><th>课程</th><th>上课</th><th>下课</th><th>签到</th><th>状态</th></tr>
+            </thead>
+            <tbody>
+                <!--<tr><td><span>语文</span><span>高一·1班</span></td><td>07:30</td><td>8:15</td><td class="sign-flag be-late">7:25</td><td>未</td></tr>-->
+                <!--<tr><td><span>语文</span><span>高一·1班</span></td><td>07:30</td><td>8:15</td><td class="sign-flag">7:25</td><td>未</td></tr>-->
+                <!--<tr><td><span>语文</span><span>高一·1班</span></td><td>07:30</td><td>8:15</td><td class="sign-flag">7:25</td><td>未</td></tr>-->
+                <!--<tr><td><span>语文</span><span>高一·1班</span></td><td>07:30</td><td>8:15</td><td class="sign-flag be-late">7:25</td><td>未</td></tr>-->
+                <!--<tr><td><span>语文</span><span>高一·1班</span></td><td>07:30</td><td>8:15</td><td class="sign-flag">7:25</td><td>未</td></tr>-->
+                <!--<tr><td><span>语文</span><span>高一·1班</span></td><td>07:30</td><td>8:15</td><td class="sign-flag">7:25</td><td>未</td></tr>-->
+            </tbody>
+        </table>
+        <div class="clock-ul">
+            <ul>
+                <!--<li><i class="i-normal"></i><p><span>正常打卡</span><span>进校时间： <label class="l-normal">07:28</label></span></p></li>-->
+                <!--<li><i class="i-normal"></i><p><span>正常打卡</span><span>离校时间： <label class="l-normal">07:28</label></span></p></li>-->
+                <!--<li><i class="i-late"></i><p><span>迟到</span><span>进校时间： <label class="l-late">07:28</label></span></p></li>-->
+                <!--<li><i class="i-miss"></i><p><span>旷课</span><span>离校时间： <label class="l-miss">07:28</label></span></p></li>-->
+            </ul>
+        </div>
+        <div class="change-day">
+            <button><i class="before-icon"></i>前一天</button>
+            <button disabled="disabled">后一天<i class="after-icon"></i></button>
+        </div>
+    </section>
+
+    <!-- 统计-->
+    <section class="totalNumber" style="display: none">
+        <div class="tab-change-list">
+            <span class="week"><label class="active">周考勤</label></span>
+            <span class="month"><label>月考勤</label></span>
+            <span class="term"><label>学期考勤</label></span>
+        </div>
+        <div class="count-list-box week-list">
+            <p><label>第1周（9月20日~9月27日）</label><span class="date-select data-select-week"></span></p>
+            <p>应上课<span class="ying">8节</span></p>
+            <p>实上课<span class="shi">2节</span></p>
+            <p class="kuang-box">缺勤<span class="kuang-list1" onclick="singleJump(1);"><label class="kuang">2</label><i class="arror-right"></i></span></p>
+            <p class="chi-box">迟到<span class="chi-list" onclick="singleJump(2);"><label class="chi">2</label><i class="arror-right"></i></span></p>
+            <p class="zao-box">早退<span class="zao-list" onclick="singleJump(3);"><label class="zao">2</label><i class="arror-right"></i></span></p>
+            <div class="change-day change-dayy-week">
+                <button><i class="before-iconn before-w-icon"></i>前一周</button>
+                <button disabled="disabled">后一周<i class="after-iconn after-w-icon"></i></button>
+            </div>
+        </div>
+        <div class="count-list-box month-list">
+            <p><label class="month-time">2017年9月</label><span class="date-select date-select-month"></span></p>
+            <p>应上课<span class="ying">8节</span></p>
+            <p>实上课<span class="shi">2节</span></p>
+            <p class="kuang-box">缺勤<span class="kuang-list2" onclick="singleJump(1);"><label class="kuang">2</label><i class="arror-right"></i></span></p>
+            <p class="chi-box">迟到<span class="chi-list2" onclick="singleJump(2);"><label class="chi">2</label><i class="arror-right"></i></span></p>
+            <p class="zao-box">早退<span onclick="singleJump(3);"><label class="zao">2</label><i class="arror-right"></i></span></p>
+            <div class="change-day change-dayy">
+                <button><i class="before-iconn before-m-icon"></i>前一月</button>
+                <button disabled="disabled">后一月<i class=" after-iconn after-m-icon"></i></button>
+            </div>
+        </div>
+        <div class="count-list-box term-list">
+            <p><label class='termKey' data-key = ''></label><span class="date-select date-select-term"></span></p>
+            <p>应上课<span class="ying">8节</span></p>
+            <p>实上课<span class="shi">2节</span></p>
+            <p class="kuang-box">缺勤<span class="kuang-list3" onclick="singleJump(1);"><label class="kuang">2</label><i class="arror-right"></i></span></p>
+            <p class="chi-box">迟到<span class="chi-list3" onclick="singleJump(2);"><label class="chi">2</label><i class="arror-right"></i></span></p>
+            <p class="zao-box">早退<span onclick="singleJump(3);"><label class="zao">2</label><i class="arror-right"></i></span></p>
+            <div class="change-day semester change-dayy">
+                <button><i class="before-iconn before-x-icon"></i>前一学期</button>
+                <button disabled="disabled">后一学期<i class="after-iconn after-x-icon"></i></button>
+            </div>
+        </div>
+
+        <!-- 学期选择弹窗-->
+        <div class="maskk"></div>
+        <div class="select-term-box" id="select-term-box">
+            <ul>
+                <li><span>高一上学期</span><label class="checked-icon"></label></li>
+                <li><span>高一下学期</span><label class="checked-icon"></label></li>
+                <li><span>高二上学期</span><label class="checked-icon"></label></li>
+                <li><span>高二下学期</span><label class="checked-icon"></label></li>
+                <li><span>高三上学期</span><label class="checked-icon"></label></li>
+                <li><span>高三下学期</span><label class="checked-icon"></label></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="sselct-choose-week-list" style="display: none">
+        <!--个人信息-->
+        <section class="week-select">
+            <p><span>选择年、月</span><span class="date-select  date-select-monthh "><label>2017年10月</label><img src="images/common-ic-more.png"/></span></p>
+            <p><span>选择周</span><span class="date-select select-week week-select-month"><label>第1周</label><img src="images/common-ic-more.png"/></span></p>
+            <div class="error-info"></div>
+        </section>
+        <div class="save-button"><button type="button">保存</button></div>
+        <!-- 周选择弹窗-->
+        <div class="maskkk"></div>
+        <div class="select-week-total-box" id="select-week-total-box">
+            <div class="select-week-list-box">
+                <ul>
+                    <!--<li><span>第一周（1日-7日）</span><label class="checked-icon"></label></li>-->
+                    <!--<li><span>第一周（1日-7日）</span><label class="checked-icon"></label></li>-->
+                    <!--<li><span>第一周（1日-7日）</span><label class="active"></label></li>-->
+                    <!--<li><span>第一周（1日-7日）</span><label class="checked-icon"></label></li>-->
+                    <!--<li><span>第一周（1日-7日）</span><label class="checked-icon"></label></li>-->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--旷课考勤-->
+    <div class="single-tui-box single-miss-box kuang-list-box" style="display: none">
+        <p><span>2017-09-05</span><span>第一节 | 语文</span></p>
+        <p><span>2017-09-05</span><span>第一节 | 语文</span></p>
+        <p><span>2017-09-05</span><span>第一节 | 语文</span></p>
+    </div>
+
+    <!-- 迟到-->
+    <div class="single-tui-box single-chi-box" style="display: none">
+        <div><p><span>2017-09-05 周二 </span><span>第一节 | 语文课</span></p><label>早退5分钟</label></div>
+        <div><p><span>2017-09-05 周二 </span><span>第一节 | 语文课</span></p><label>早退5分钟</label></div>
+        <div><p><span>2017-09-05 周二 </span><span>第一节 | 语文课</span></p><label>早退5分钟</label></div>
+    </div>
+
+    <!-- 早退-->
+    <div class="single-tui-box single-zao-box " style="display: none">
+        <div><p><span>2017-09-05 周二 </span><span>第一节 | 语文课</span></p><label>早退5分钟</label></div>
+        <div><p><span>2017-09-05 周二 </span><span>第一节 | 语文课</span></p><label>早退5分钟</label></div>
+        <div><p><span>2017-09-05 周二 </span><span>第一节 | 语文课</span></p><label>早退5分钟</label></div>
+    </div>
+
+    <!-- 考勤和统计切换-->
+    <div class="change-menu">
+        <span class="active"><i class="punch-clock"></i>考勤</span>
+        <span class="total"><i class="total-punch"></i>统计</span>
+    </div>
+
+    <section>
+        <div class="maskk"></div>
+        <div class="no-access">
+            <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+        </div>
+    </section>
+
+
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/datePicker.js"></script>
+<script src="/js/punchClock.js"></script>
+<script src="/js/week-select.js"></script>
+</html>

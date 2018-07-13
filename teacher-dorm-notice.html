@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>宿舍通知</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/dorm-notice.css" />
+</head>
+<body>
+    <!--宿舍通知-->
+    <section class="dorm-notice-box">
+        <!-- 通知列表-->
+        <div class="notice-list">
+            <ul>
+                <!--
+                <li>
+                    <p class="notice-head"><span>2017-12-15 </span><span class="notice-time active">07:00-18:00</span></p>
+                    <div>
+                        <span class="notice-list-left"><img src="images/ic-playing.png"/></span>
+                        <span class="notice-list-right">
+                            <p>会议通知<i class="active">赵雅芝</i></p>
+                            <p>请高一年级全体师生在今天（12月15日）下午到第二操场集合参加教...</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <p class="notice-head"><span>2017-12-15 </span><span class="notice-time">07:00-18:00</span></p>
+                    <div>
+                        <span class="notice-list-left"><img src="images/ic-overdue.png"/></span>
+                        <span class="notice-list-right">
+                            <p>会议通知<i>赵雅芝</i></p>
+                            <p>请高一年级全体师生在今天（12月15日）下午到第二操场集合参加教...</p>
+                        </span>
+                    </div>
+                </li>-->
+            </ul>
+             <div class="clearfix"></div>
+            <!-- 加载更多-->
+            <div class="caseud" data-nowPage="1" data-allPage="1">
+                <a href="javascript:;">下拉加载更多。。。</a>
+            </div>
+
+            <div class="add-new-notice"><img src="images/add-notice.png">新增通知</div>
+        </div>
+        <div class="clearfix"></div>
+        <!--新建通知 -->
+        <div class="add-new-notice-box" style="display: none">
+            <div class="add-part-one">
+                <p><input type="text" placeholder="标题" name="title" class="edit-notice-title"/></p>
+                <p><span>日期</span><input type="text" name="date" id="addTime" placeholder="选择时间" class="addTime"/></p>
+                <p><span>开始</span><input type="text" name="start" id="addstartTime" placeholder="选择时间" class="addstartTime"/></p>
+                <p><span>结束</span><input type="text" name="end" id="addendTime" placeholder="选择时间" class="addendTime"/></p>
+            </div>
+            <div class="add-part-two">
+               <textarea placeholder="通知内容" name="content" class="new-content"></textarea>
+            </div>
+            <div class="save-new-notice">立即发布</div>
+        </div>
+
+        <!--编辑通知 -->
+        <div class="add-edit-notice-box" style="display: none">
+            <div class="add-part-one">
+                <p><input type="text" placeholder="标题" name="title" class="edit-title" value=""/></p>
+                <p><span>日期</span><input type="text" name="start" id="Time" placeholder="选择时间" class="Time"/></p>
+                <p><span>开始</span><input type="text" name="start" placeholder="选择时间" id="startTime" class="startTime"/></p>
+                <p><span>结束</span><input type="text" name="end" placeholder="选择时间" id="endTime" class="endTime"/></p>
+            </div>
+            <div class="add-part-two">
+                <textarea placeholder="通知内容" name="content" class="edit-content"></textarea>
+            </div>
+            <div class="save-edit-notice">
+                <span class="save-modify">保存修改</span>
+                <span class="delete-notice">删除通知</span>
+            </div>
+            <input type="hidden" name="id"/>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="maskk"></div>
+        <div class="no-access">
+            <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+        </div>
+    </section>
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/datePicker.js"></script>
+<script src="/js/teacherDormNotice.js"></script>
+</html>

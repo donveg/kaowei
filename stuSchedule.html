@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>学生课表</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stu-schedule.css" />
+</head>
+<body>
+    <!--日课表-->
+    <section class="date-schedule" >
+        <nav class="schedule-nav">
+            <span class="prev"><img src="images/left-ic-past.jpg"/></span>
+            <div class="date-change">
+                <ul>
+                    <li>11日</li>
+                    <li>12日</li>
+                    <li class="active">13日</li>
+                    <li>14日</li>
+                    <li>15日</li>
+                </ul>
+            </div>
+           <span class="next"><img src="images/right-ic-next.jpg"/></span>
+        </nav>
+        <p class="schedule-date"></p>
+        <div class="morning-schedule">
+            <span>上午</span>
+            <ul>
+                <!--<li><i class="node-icon"></i><span class="fixed-width">07:30-08:15</span><span>第一节</span><span>语文（高一·3班）</span></li>-->
+                <!--<li><i class="node-icon"></i><span class="fixed-width">09:30-10:15</span><span>第二节</span><span>语文（高一·3班）</span></li>-->
+                <!--<li><i class="node-icon"></i><span class="fixed-width">09:30-10:15</span><span>第三节</span><span>语文（高一·3班）</span></li>-->
+                <!--<li><i class="node-icon"></i><span class="fixed-width">09:30-10:15</span><span>第四节</span><span>语文（高一·3班）</span></li>-->
+            </ul>
+        </div>
+        <div class="afternoon-schedule">
+            <span>下午</span>
+            <ul>
+                <!--<li><i class="node-icon"></i><span>07:30-08:15</span><span>第五节</span><span>语文（高一·3班）</span></li>-->
+                <!--<li><i class="node-icon"></i><span>09:30-10:15</span><span>第六节</span><span>语文（高一·3班）</span></li>-->
+                <!--<li><i class="node-icon"></i><span>09:30-10:15</span><span>第七节</span><span>语文（高一·3班）</span></li>-->
+                <!--<li><i class="node-icon"></i><span>09:30-10:15</span><span>第八节</span><span>语文（高一·3班）</span></li>-->
+            </ul>
+        </div>
+    </section>
+
+    <!-- 座位表-->
+    <section>
+        <div class="seatingChartBox" style="display: none">
+            <p>2017/09/16  周一</p>
+            <div class="char-info-list">
+                <span><i class="i-clock"></i><label class="info-clock">7:30</label></span>
+                <span><i class="i-book"></i><label class="info-book">语文</label></span>
+                <span><i class="i-location"></i><label class="info-location">A3</label></span>
+            </div>
+            <div class="classroom-list">
+                <p>讲台</p>
+                <ul class="seating-list">
+                    <!--<li><span></span><span></span><label class="crossRoad"></label><span></span><span></span><span></span><span></span><label class="crossRoad"></label><span></span><span></span></li>-->
+                    <!--<li><span></span><span></span><label class="crossRoad"></label><span></span><span></span><span></span><span></span><label class="crossRoad"></label><span></span><span></span></li>-->
+                    <!--<li><span></span><span></span><label class="crossRoad"></label><span></span><span></span><span></span><span></span><label class="crossRoad"></label><span></span><span></span></li>-->
+                    <!--<li><span></span><span></span><label class="crossRoad"></label><span></span><span></span><span></span><span></span><label class="crossRoad"></label><span></span><span></span></li>-->
+                    <!--<li class="crossRoadTop"><span></span><span></span><label class="crossRoad"></label><span></span><span></span><span></span><span></span><label class="crossRoad"></label><span></span><span></span></li>-->
+                    <!--<li><span></span><span></span><label class="crossRoad"></label><span></span><span></span><span></span><span></span><label class="crossRoad"></label><span></span><span></span></li>-->
+                    <!--<li><span></span><span></span><label class="crossRoad"></label><span></span><span></span><span></span><span></span><label class="crossRoad"></label><span></span><span></span></li>-->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--周课表-->
+    <section class="week-schedule" style="display: none">
+        <p class="schedule-week-head">高二上</p>
+        <table class="schedule-table am">
+            <thead>
+                <tr><th>上午</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th></tr>
+            </thead>
+            <tbody>
+                <!--<tr><td>1</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+                <!--<tr><td>2</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+                <!--<tr><td>3</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+                <!--<tr><td>4</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+            </tbody>
+        </table>
+        <table class="schedule-table pm">
+            <thead>
+            <tr><th>下午</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th></tr>
+            </thead>
+            <tbody>
+            <!--<tr><td>5</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+            <!--<tr><td>6</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+            <!--<tr><td>7</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+            <!--<tr><td>8</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td><td>语文</td></tr>-->
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <div class="maskk"></div>
+        <div class="no-access">
+            <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+        </div>
+    </section>
+
+    <!-- 日课表和周课表切换-->
+    <div class="change-menu">
+        <span class="date active">日课表</span>
+        <span class="week">周课表</span>
+    </div>
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/stuSchedule.js"></script>
+</html>

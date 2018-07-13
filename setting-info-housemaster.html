@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>信息设置</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stu-setting.css" />
+</head>
+<body>
+    <!--个人信息-->
+    <section class="info-list">
+        <div class="info-list-part1">
+            <p class="head-img">头像:<span class="info-img"><img src="images/head.png"></span></p>
+            <p>姓名:<span class="info-realname"></span></p>
+            <p>性别:<span class="info-sex"></span></p>
+            <p>学校:<span class="info-school"></span></p>
+            <p>用户名:<span class="info-username"></span></p>
+            <p>手机号:<span class="info-phone"></span></p>
+            <p>邮箱:<span class="info-email"></span></p>
+            <a href="drom-list.html"><p>管理范围:<span class="info-range"><label></label><img src="images/common-ic-more.png"></span></p></a>
+            <!--<a href="change-pass.html"><p>密码:<span><img src="images/common-ic-more.png"></span></p></a>-->
+        </div>
+
+        <div class="info-list-part3">
+            <button id="loginOut">注销账号</button>
+        </div>
+
+    </section>
+    <!-- 解除绑定失败-->
+    <section>
+        <span id="unbind">解除绑定失败</span>
+    </section>
+
+    <section>
+        <div class="maskk"></div>
+        <div class="no-access">
+            <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+        </div>
+    </section>
+    <!--选课-->
+
+    <!-- 个人和选课切换-->
+    <div class="change-menu change-role">
+        <span class="active"><i class="person-icon"></i>个人</span>
+        <span><i class="choiceCourse-icon"></i>通知</span>
+    </div>
+
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/setting-info-house.js"></script>
+</html>

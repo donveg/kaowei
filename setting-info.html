@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>信息设置</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stu-setting.css" />
+</head>
+<body>
+    <!--个人信息-->
+    <section class="info-list">
+        <div class="info-list-part1">
+            <p class="head-img">头像:<span class="info-img"><img src="images/head.png"></span></p>
+            <p>姓名:<span class="info-realname">刘天天</span></p>
+            <p>性别:<span class="info-sex">男</span></p>
+            <p>学校:<span class="info-school">成都市外国语学院附中</span></p>
+            <p>年级:<span class="info-grade">高二</span></p>
+            <p>地址:<span class="info-address">成都市外国语学院附中</span></p>
+        </div>
+
+        <div class="info-list-part2">
+            <p>用户名:<span class="info-username">laoshi</span></p>
+            <p>手机号:<span class="info-phone">18763927665</span></p>
+            <p>邮箱:<span class="info-email">liutiantian@sina.com</span></p>
+            <!--<a href="change-pass.html"><p>密码:<span><img src="images/common-ic-more.png"></span></p></a>-->
+        </div>
+
+        <div class="info-list-part3">
+            <button id="loginOut">注销账号</button>
+        </div>
+
+    </section>
+    <!-- 解除绑定失败-->
+    <section>
+        <span id="unbind">解除绑定失败</span>
+    </section>
+
+    <!-- 弹窗提醒-->
+    <div class="mask" style="display: none"></div>
+    <div class="warming-box" style="display: none">
+        <div class="warming-box-head"><span>温馨提示</span></div>
+        <p>选修课只能选一次，不能重选请确认您的选课组合</p>
+        <h2>化学+历史+地理</h2>
+        <div class="warming-btn-group">
+            <span class="btn-reelect">重选</span>
+            <span class="btn-refer">提交</span>
+        </div>
+    </div>
+
+    <section>
+        <div class="maskk"></div>
+        <div class="no-access">
+            <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+        </div>
+    </section>
+
+    <!--选课-->
+    <section class="choice-course" style="display: none">
+        <div class="most-people-box">
+            <div class="headerr"> <img src="images/teacher.png"/>老师推荐选课</div>
+            <div class="teacher-tui">
+                <!--<p>物理+化学+生物&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+                <!--<p>物理+化学+生物&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+                <!--<p>历史+地理+政治&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+                <!--<p>历史+地理+政治&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+                <!--<p>历史+地理+政治&nbsp;（<i>11</i>/100）<span class="checked-icon"></span></p>-->
+
+            </div>
+
+        </div>
+
+        <a href="screen-course.html"><div class="more-choice">更多选择<span><img src="images/common-ic-more.png" class="get-more"></span></div></a>
+    </section>
+
+    <!-- 我的选修课-->
+    <section class="my-choose-course" style="display: none">
+        <div>
+            <p>我的选修课</p>
+            <ul class="addMySelect">
+                <!--<li data-id="20"><i class="wu" ></i><span>物理</span></li>-->
+                <!--<li data-id="21"><i class="hua" ></i><span>化学</span></li>-->
+                <!--<li data-id="22"><i class="sheng"></i><span>生物</span></li>-->
+                <!--<li data-id="25"><i class="zheng" ></i><span>政治</span></li>-->
+                <!--<li data-id="23"><i class="di" ></i><span>地理</span></li>-->
+                <!--<li data-id="24"><i class="shi" ></i><span>历史</span></li>-->
+            </ul>
+        </div>
+        <div class="btn-re-selection">重新选择课程组合</div>
+    </section>
+
+    <!-- 个人和选课切换-->
+    <div class="change-menu change-role">
+        <span class="active"><i class="person-icon"></i>个人</span>
+        <span><i class="choiceCourse-icon"></i>选课</span>
+    </div>
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/setting-info.js"></script>
+</html>

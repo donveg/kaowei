@@ -1,0 +1,943 @@
+Body {
+    width: 100%;
+    height: 100%;
+    background: #f5f6f7;
+}
+a{
+    color: #000;
+}
+/*学生课表*/
+/*日课表*/
+.schedule-nav{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: #3699ED;
+}
+.schedule-nav ul{
+    display: inline-block;
+}
+.schedule-nav >span{
+    width: 13%;
+    display: inline-block;
+    vertical-align: top;
+}
+.date-change{
+    width: 70%;
+    height: 2rem;
+    overflow: hidden;
+    display: inline-block;
+}
+.schedule-nav >span img{
+    width: 1.2rem;
+    margin-top: 0.4rem;
+    border-radius: 0.2rem;
+    margin-left: 0.5rem;
+}
+.schedule-nav ul{
+    width: 62rem;
+    height: 2rem;
+}
+.schedule-nav ul li{
+    width: 2.1rem;
+    text-align: center;
+    float: left;
+    color: #c6e7ff;
+    font-size: 0.56rem;
+}
+.schedule-nav ul li.active{
+    color: #fff;
+}
+.schedule-nav ul li:last-child img{
+    margin-left: 0rem;
+}
+.schedule-date{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.6rem;
+    color: #444444;
+    border-bottom: 1px solid  #EEEEEE;
+    padding-left: 0.5rem;
+    background: #FFFFFF;
+}
+.no-access{
+    width: 12rem;
+    height: 3.5rem;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 10;
+    display: none;
+}
+.no-access p{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0.5rem;
+    line-height: 1.2rem;
+}
+.morning-schedule,.afternoon-schedule{
+    width: 100%;
+    background-color: #fff;
+    padding: 1.2rem 0.5rem;
+    float: left;
+}
+.morning-schedule{
+    margin-bottom: 0.5rem;
+}
+.morning-schedule ul,.afternoon-schedule ul{
+    width: 88%;
+    float: right;
+    text-align: right;
+}
+.morning-schedule ul li,.afternoon-schedule ul li{
+    position: relative;
+    font-size: 0.58rem;
+    border-left: 1px solid  #D1D1D1;
+    padding: 0 0 1rem 0.5rem;
+    text-align: left;
+}
+.morning-schedule ul li span:first-child,.afternoon-schedule ul li span:first-child{
+   text-align: left;
+}
+.morning-schedule ul li:last-child,.afternoon-schedule ul li:last-child{
+    border-left: none;
+    padding: 0 0 0rem 0.5rem;
+}
+.morning-schedule ul li .node-icon,.afternoon-schedule ul li .node-icon{
+    position: absolute;
+    left: -5px;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #3699ED;
+    background-size: 100%;
+    border-radius: 50%;
+}
+
+.morning-schedule >span,.afternoon-schedule >span{
+    display: inline-block;
+    width: 12%;
+    float: left;
+}
+.morning-schedule ul li span,.afternoon-schedule ul li span{
+    margin-right: 0.3rem;
+}
+.morning-schedule ul li span.fixed-width,.afternoon-schedule ul li span.fixed-width{
+    width: 30%;
+    display: inline-block;
+}
+/*周课表*/
+.schedule-week-head{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background: #3699ED;
+    font-size: 0.7rem;
+    color: #FFFFFF;
+}
+.schedule-table{
+    width: 100%;
+}
+.schedule-table thead tr{
+    height: 2.2rem;
+    line-height: 2.2rem;
+}
+.schedule-table tbody tr{
+    height: 2.2rem;
+    line-height: 1rem;
+}
+.schedule-table thead tr th{
+    width: 12.5%;
+    text-align: center;
+    background: #D8EDFF;
+}
+.schedule-table tbody tr td{
+    width: 12.5%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.55rem;
+}
+.schedule-table tbody tr td span{
+    width: 100%;
+    line-height: 0.8rem;
+    /*height: 1rem;*/
+    display: block;
+}
+.pm{
+    margin-bottom: 2.5rem;
+}
+.schedule-table thead tr th:first-child,.schedule-table tbody tr td:first-child{
+    height: 2.2rem;
+    border-right: 1px solid #d6e6f3;
+}
+.schedule-table tbody tr:nth-of-type(odd) {
+    background: #fff;
+}
+.schedule-table tbody tr:nth-of-type(even) {
+    background: #F8F8F8;
+}
+.change-menu{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.10);
+    background: #fff;
+}
+.change-menu span{
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+    color: #666666;
+    font-size: 0.7rem;
+}
+.change-menu span:first-child{
+    border-right: 1px solid rgba(0,0,0,0.10);
+}
+.change-menu span.active{
+    color: #3699ED;
+}
+
+/*老师课表选择*/
+.schedule-navv{
+    background: #6BBBFF;
+}
+
+.teach-my-schedule{
+
+}
+.teach-my-title{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: #3699ED;
+    text-align: center;
+    color: #fff;
+}
+.teach-my-title i{
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/arror-bb.png")no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+}
+/*课堂选择弹窗*/
+.mask{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bbg.png");
+    background-size: 100%;
+    z-index: 9;
+}
+.select-room-box{
+    width: 13rem;
+    height: 13rem;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+}
+.select-room-list{
+    width: 100%;
+    min-height: 4rem;
+    background: #E3E3E3;
+    border-radius: 4px;
+}
+.select-room-list p i.arror-icon{
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/arror-tt-bb.png")no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-left: 8rem;
+    vertical-align: middle;
+}
+.select-room-list p i.active{
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/arror-ss-tt.png")no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-left: 8rem;
+    vertical-align: middle;
+}
+.select-room-list p{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: #fff;
+    padding-left: 0.8rem;
+    border-bottom: 1px solid #eee;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.select-room-list p .checked-icon{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 8rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-default.png")no-repeat;
+    background-size: 100%;
+}
+.select-room-list p span.active{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 8rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-pressed.png")no-repeat;
+    background-size: 100%;
+}
+.select-room-list-part2>div{
+    height: 2rem;
+    line-height: 2rem;
+    background: #F1F1F2;
+}
+.select-room-list-part2>div span{
+    width: 3rem;
+    display: inline-block;
+    text-align: center;
+}
+.select-room-list-part2>div span.active{
+    color: #3699ED;
+}
+.select-room-list-part2 ul{
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    float: left;
+    background: #E3E3E3;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-bottom: 0.5rem;
+}
+.select-room-list-part2 ul li{
+    width: 25%;
+    height: 2rem;
+    line-height: 2rem;
+    float: left;
+}
+.select-room-list-part2 ul li .checked-icon{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 0.3rem;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-default.png")no-repeat;
+    background-size: 100%;
+}
+.select-room-list-part2 ul li.active .checked-icon{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 0.3rem;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-pressed.png")no-repeat;
+    background-size: 100%;
+}
+.margin-bottom{
+    margin-bottom: 2.8rem;
+}
+.schedule-table-teacher tr td span{
+    width: 100%;
+    text-align: center;
+    display: block;
+    line-height: 1rem;
+    height: 1rem;
+}
+.schedule-table-teacher thead tr th{
+    width: 11.5%;
+}
+.schedule-table-teacher tbody tr td {
+    width: 11.5%;
+    text-align: center;
+    font-size: 0.55rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+}
+.schedule-table-teacher thead tr th:first-child,.schedule-table-teacher tbody tr td:first-child{
+    width: 19.5%;
+}
+/*学生打卡*/
+.clock-nav{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: #3699ED;
+    padding-left: 0.8rem;
+}
+.clock-nav span{
+    color: #fff;
+}
+.date-selected img{
+    float: right;
+    margin-right: 0.8rem;
+    height: 1rem;
+    vertical-align: middle;
+    margin-top: 0.5rem;
+}
+
+.clock-table{
+    width: 100%;
+}
+.clock-table thead tr{
+    height: 1.8rem;
+    line-height: 1.8rem;
+}
+.clock-table tbody tr{
+    height: 2.4rem;
+}
+.clock-table thead tr th{
+    width: 12.5%;
+    text-align: center;
+    background: #D8EDFF;
+}
+.clock-table thead tr th:first-child{
+    background: #B0DBFF;
+}
+.clock-table tbody tr td{
+    width: 12.5%;
+    text-align: center;
+    font-size: 0.52rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+}
+.clock-table tbody tr td.sign-flag{
+    color: #3699ED;
+}
+.clock-table tbody tr td.be-late{
+    color: #E87738;
+}
+
+.clock-table tbody tr td span{
+    width: 100%;
+    text-align: center;
+    display: block;
+    line-height: 0.8rem;
+    /*height: 1rem;*/
+}
+.clock-table thead tr th:first-child,.clock-table tbody tr td:first-child{
+    border-right: 1px solid #d6e6f3;
+}
+.clock-table tbody tr:nth-of-type(odd) {
+    background: #fff;
+}
+.clock-table tbody tr:nth-of-type(even) {
+    background: #F8F8F8;
+}
+.change-day{
+    margin: 0.8rem 0 2.8rem 0;
+}
+.change-day button{
+    width: 40%;
+    height: 2rem;
+    line-height: 2rem;
+    display: inline-block;
+    text-align: center;
+    background: #3699ED;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+    margin-left: 0.8rem;
+    margin-right: 0.5rem;
+    position: relative;
+}
+.change-day button[disabled="disabled"]{
+    background: #999;
+}
+.change-day button .before-icon,.change-day button .before-iconn{
+    width: 1.8rem;
+    height: 2rem;
+    display: inline-block;
+    background: url("../images/ll-ic-past.png")no-repeat;
+    vertical-align: middle;
+}
+.change-day button .after-icon,.change-day button .after-iconn{
+    width: 1.8rem;
+    height: 2rem;
+    display: inline-block;
+    background: url("../images/rr-ic-next.png")no-repeat;
+    vertical-align: middle;
+}
+
+.change-menu span .punch-clock{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/tabbar-ic--default.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+ }
+.change-menu span.active .punch-clock{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/tabbar-ic-pressed.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.change-menu span .total-punch{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/common-ic-tj-default.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.change-menu span.active .total-punch{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.34rem;
+    background: url("../images/common-ic-tj-pressed.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+/*老师考勤统计*/
+.tab-change-list{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.tab-change-list span{
+    width: 32%;
+    height: 2rem;
+    display: inline-block;
+    text-align: center;
+}
+.tab-change-list span label.active{
+    height: 2rem;
+    line-height: 2rem;
+    color: #3699ED;
+    display: inline-block;
+    border-bottom: 1px solid #3699ED;
+}
+.month-list,.term-list{
+    display: none;
+}
+.count-list-box{
+    background: #fff;
+}
+.count-list-box p{
+    width: 90%;
+    margin-left: 5%;
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #eee;
+}
+.count-list-box p span{
+    float: right;
+    color: #999;
+}
+.count-list-box .date-select{
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../images/select-gray-date.png")no-repeat;
+    background-size: 100% 100%;
+}
+.count-list-box p span .arror-right{
+    width: 0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    background: url("../images/common-ic-more.png")no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+}
+.change-day {
+    margin-top: 2rem;
+}
+.single-list-box{
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    margin-top: 0.5rem;
+}
+
+/*早退*/
+.single-tui-box{
+    width: 100%;
+    line-height: 2.2rem;
+    margin-top: 0.5rem;
+}
+.single-tui-box div label{
+    float: right;
+    margin-right: 5%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    display: inline-block;
+}
+.single-tui-box div{
+    width: 100%;
+    padding-left: 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.single-tui-box div>p{
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+.single-tui-box div>p span{
+    line-height: 1rem;
+    display: block;
+}
+.single-tui-box div>p span:last-child{
+    color: #999;
+}
+
+.single-miss-box p{
+    width: 100%;
+    padding-left: 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.single-miss-box p span:last-child{
+   float: right;
+    margin-right: 5%;
+    color: #999;
+}
+
+/*学生统计周考勤*/
+.maskk{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bbg.png");
+    background-size: 100%;
+    z-index: 9;
+    display: none;
+}
+.maskkk{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bbg.png");
+    background-size: 100%;
+    z-index: 9;
+    display: none;
+}
+.select-term-box,.select-week-total-box{
+    width: 11rem;
+    height: 14rem;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    border-radius: 5px;
+    display: none;
+}
+.select-week-total-box{
+}
+.select-week-list-box{
+    width: 100%;
+    background: #f5f6f7;
+    border-radius: 5px;
+
+}
+.select-term-box ul li .checked-icon,.select-week-list-box ul li label.checked-icon{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+   float: right;
+    margin-top: 0.6rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-default.png")no-repeat;
+    background-size: 100%;
+}
+.select-term-box ul li label.active,.select-week-list-box ul li label.active{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    float: right;
+    margin-top: 0.6rem;
+    vertical-align: middle;
+    background: url("../images/common-ic-choose-pressed.png")no-repeat;
+    background-size: 100%;
+}
+.select-term-box ul,.select-week-list-box ul{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #fff;
+    border-radius: 5px;
+}
+.select-term-box ul li,.select-week-list-box ul li{
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    border-radius: 4px;
+    height: 2rem;
+    line-height: 2rem;
+    color: #666;
+    font-size: 0.6rem;
+}
+
+.select-term-box ul li.active{
+    /*background: #3699ED;*/
+    /*color: #fff;*/
+}
+.select-week-list-box ul li{
+
+}
+/*周选择*/
+.week-select{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #fff;
+}
+.week-select p{
+    clear: both;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #eee;
+    color: #353535;
+}
+.week-select p input{
+
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.65rem;
+}
+.save-button{
+    margin-top: 2rem;
+}
+.save-button button {
+    width: 90%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    outline: none;
+    border: none;
+    background: #3699ED;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 5%;
+    color: #fff;
+    font-size: 0.75rem;
+}
+.date-select-month,.date-select-monthh,.select-week{
+    float: right;
+}
+.week-select img{
+    width: 0.4rem;
+    vertical-align: sub;
+    margin-left: 0.5rem;
+}
+
+/*add new css 2017/11/24*/
+.clock-ul{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1rem;
+}
+.clock-ul li{
+    width: 100%;
+    height: 3.5rem;
+    padding-left: 0.66rem;
+    border-left:1px solid #ddd;
+    position: relative;
+}
+.clock-ul li:last-child{
+    height: 2.2rem;
+    border-left: none;
+}
+.clock-ul li .i-normal{
+    width: 0.66rem;
+    height: 0.66rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #3699ED;
+    position: absolute;
+    left: -0.33rem;
+    top: 0;
+}
+.clock-ul li .i-late{
+    width: 0.66rem;
+    height: 0.66rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #F2C064;
+    position: absolute;
+    left: -0.33rem;
+    top: 0;
+}
+.clock-ul li .i-miss{
+    width: 0.66rem;
+    height: 0.66rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #EF8790;
+    position: absolute;
+    left: -0.33rem;
+    top: 0;
+}
+.clock-ul li p span{
+    height: 1.2rem;
+    vertical-align: top;
+    display: block;
+    font-size: 0.65rem;
+    color: #444444;
+}
+.clock-ul li p span:last-child{
+    font-size: 0.62rem;
+}
+.clock-ul li p span .l-normal{
+    color: #3699ED;
+}
+.clock-ul li p span .l-late{
+    color: #F2C064;
+}
+.clock-ul li p span .l-miss{
+    color: #EF8790;
+}
+
+/*座位表*/
+.seatingChartBox{
+    background: #fff;
+}
+.seatingChartBox>p{
+    color: #353535;
+    font-size: 0.65rem;
+    width: 100%;
+    padding-left: 4%;
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #eee;
+}
+.char-info-list{
+    width: 100%;
+}
+.char-info-list span{
+    width: 52%;
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 4%;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #666;
+}
+.char-info-list span:first-child,.char-info-list span:last-child{
+    width: 20%;
+}
+.i-clock,.i-book,.i-location{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    vertical-align: sub;
+    margin-right: 2%;
+}
+.i-clock{
+    background: url("../images/ic-time.png")no-repeat;
+    background-size: 100% 100%;
+
+}
+.i-book{
+    background: url("../images/ic-subject.png")no-repeat;
+    background-size: 100% 100%;
+}
+.i-location{
+    background: url("../images/ic-location.png")no-repeat;
+    background-size: 80% 100%;
+    margin-right: 0.02rem;
+}
+.classroom-list{
+    text-align: center;
+    margin-top: 1rem;
+}
+.classroom-list p{
+    width: 4rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    display: inline-block;
+    background: #3699ED;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
+    font-size: 0.7rem;
+}
+.classroom-list ul {
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 2.2rem;
+}
+.classroom-list ul .crossRoadTop{
+    margin-top: 0.5rem;
+}
+.classroom-list ul li span{
+    width: 1.25rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    display: inline-block;
+    background: #D8D8D8;
+    border-radius: 2px;
+    margin-right: 2%;
+    margin-bottom: 0.25rem;
+    vertical-align: middle;
+}
+.classroom-list ul li span.detailSpan{
+    background: #E87738;
+    color: #fff;
+}
+.classroom-list ul li .crossRoad{
+    margin-right: 0.5rem;
+}
+.classroom-list ul li .margin-left{
+    margin-left: 0.5rem;
+}
+.classroom-list ul li .margin-right{
+    margin-right: 0.5rem;
+}
+.classroom-list ul li.margin-top{
+    margin-top: 0.5rem;
+}
+.classroom-list ul li.margin-bottom{
+    margin-bottom: 0.5rem;
+}

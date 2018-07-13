@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>宿舍考勤</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/teach-dorm-check.css" />
+</head>
+<body>
+<!-- 老师宿舍实时数据-->
+<div class="actual-dorm-data">
+    <div class="teach-my-dorm-title" style="display: block;">
+        <select class="teach-dorm-title-select">
+            <option></option>
+        </select>
+    </div>
+    <ul class="floor-list-ul" style="display: block;">
+        <!-- <li>
+            <p class="part-one">一楼 (36/48)<i class="active"></i></p>
+            <div class="room-number-list">
+                <p class="part-two">101室
+                    <span class="already-people-num"><i class="active"></i><i class="active"></i><i></i><i></i><i></i><i></i></span>
+                    <span class="part-three">3/6 <label class="active"></label></span>
+                </p>
+                <ul class="room-name-list">
+                    <li class="active">吴昊</li><li class="active">任恩翔</li><li>吴昊</li><li>任恩翔</li><li>吴昊</li><li>任恩翔</li>
+                </ul>
+            </div>
+            <div>
+                <p class="part-two">102室
+                    <span class="already-people-num"><i class="active"></i><i class="active"></i><i></i><i></i><i></i><i></i></span>
+                    <span class="part-three">3/6 <label></label></span>
+                </p>
+                <ul class="room-name-list">
+                    <li class="active">吴昊</li><li class="active">任恩翔</li><li>吴昊</li><li>任恩翔</li><li>吴昊</li><li>任恩翔</li>
+                </ul>
+            </div>
+
+
+
+        </li>
+        -->
+
+    </ul>
+    <!-- 寝室详情-->
+    <div class="floor-list-detail"  style="display: none">
+        <div class="teach-detail-dorm-title">
+            <p><span class="dormDetailName"></span><span></span></p>
+        </div>
+        <p class="abnormal-title"><i></i>异常情况<span>0人</span></p>
+        <ul class="abnormal-list">
+            <!--<li class="day-abnormal-li">-->
+            <!--<div class="abnormal-list-left"><img src="images/ic-yes.png"/></div>-->
+            <!--<div class="abnormal-list-middle">-->
+            <!--<p><span>荀丽萍</span><i>高一3班</i><label>男</label></p>-->
+            <!--<p>此同学在非在寝时间进入宿舍</p>-->
+            <!--</div>-->
+            <!--<span class="abnormal-list-right"><img src="images/big-call.png"></span>-->
+            <!--</li>-->
+        </ul>
+        <div class="clearfix"></div>
+        <p class="normal-title"><i></i>正常情况<span>0人</span></p>
+        <ul class="normal-list">
+            <!--<li class="day-normal-li">-->
+            <!--<div class="normal-list-left"><img src="images/ic-no.png"/></div>-->
+            <!--<div class="normal-list-middle">-->
+            <!--<p><span>荀丽萍</span><i>高一3班</i><label>男</label></p>-->
+            <!--<p>正常离寝中</p>-->
+            <!--</div>-->
+            <!--<span class="normal-list-right"><img src="images/big-call.png"></span>-->
+            <!--</li>-->
+        </ul>
+
+
+    </div>
+    <!-- <p>一楼103室（男寝）<span>3/6</span></p>
+        <table>
+            <thead>
+                <tr><th>姓名</th><th>年级</th><th>班级</th><th>状态</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>薛亦平</td><td>高一</td><td>3班</td><td class="active">在寝</td></tr>
+                <tr><td>薛亦平</td><td>高一</td><td>3班</td><td class="active">在寝</td></tr>
+                <tr><td>薛亦平</td><td>高一</td><td>3班</td><td class="active">在寝</td></tr>
+                <tr><td>罗东</td><td>高一</td><td>3班</td><td>离寝</td></tr>
+                <tr><td>罗东</td><td>高一</td><td>3班</td><td>离寝</td></tr>
+                <tr><td>罗东</td><td>高一</td><td>3班</td><td>离寝</td></tr>
+            </tbody>
+        </table>-->
+
+    <!-- 拨打电话弹层-->
+    <div class="toPhoneMask" id="toPhoneMask">
+        <ul>
+            <li><a href="tel:13822719289">老师电话（<i class="teacherPhone">13822719289</i>）<span><img src="images/ic-phone-small.png"/></span></a></li>
+            <li><a href="tel:13822719289">家长电话（<i class="teacherPhone">13822719289</i>）<span><img src="images/ic-phone-small.png"/></span></a></li>
+        </ul>
+    </div>
+    <div class="phoneMask"></div>
+</div>
+<!--老师考勤数据统计 visibility: hidden-->
+<div class="teach-my-schedule" style="visibility: hidden">
+
+    <div class="teach-my-title-head">
+        <select class="change" onchange="changeTotalType()">
+            <option value="1">日统计</option>
+            <option value="2">月统计</option>
+            <option value="3">学期统计</option>
+            <option value="4">学年统计</option>
+        </select>
+    </div>
+    <div class="teach-my-title">2017-09-25 周三<span><img src="images/common-ic-more.png"/></span></div><!--日统计-->
+    <div class="teach-my-title-month">2017-09<span><img src="images/common-ic-more.png"/></span></div><!--月统计-->
+    <div class="teach-my-title-term">
+        <select class="semesterSelect" onchange="changeSemester()"></select>
+    </div>
+    <div class="teach-my-title-year">
+        <select class="yearChangeSelect" onchange="changeYearSelect()"></select>
+    </div><!--学年统计-->
+    <div class="class-info-list"><span class="info">请选择</span><!--<span>高一·1班 | 语文</span><label>（第一节）</label>--><span><img src="images/common-ic-more.png"/></span></div>
+
+    <p class="num">应到<i>0</i>人，实到<i>0</i>人</p>
+
+    <div class="seating-chart-box">
+        <div id="brokenLine"></div>
+        <div class="be-late">
+            <p><label class="late-head"></label>晚到<span></span></p>
+            <ul class="chi">
+                <!--<li>李万秋</li><li>李万秋</li><li>李万秋</li><li>李万秋</li><li>李万秋</li>-->
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="be-miss">
+            <p><label class="miss-head"></label>早出<span></span></p>
+            <ul class="kuang">
+                <!--<li>李万秋</li><li>李万秋</li><li>李万秋</li><li>李万秋</li><li>李万秋</li>-->
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="be-tui">
+            <p><label class="leaving-head"></label>未归<span></span></p>
+            <ul class="zao">
+                <!--<li>李万秋</li><li>李万秋</li><li>李万秋</li><li>李万秋</li><li>李万秋</li>-->
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 筛选课程消息-->
+<div class="screening-course" style="display: none">
+    <p>选择年级<span><select class="grade">
+        <option value="0">选择年级</option>
+        <option>高一</option>
+        <option>高二</option>
+        <option>高三</option>
+    </select></span></p>
+    <p>选择班级<span><select class="class">
+        <option value="0">选择班级</option>
+        <option>01班</option>
+        <option>02班</option>
+        <option>03班</option>
+        <option>04班</option>
+        <option>05班</option>
+        <option>06班</option>
+    </select></span></p>
+
+    <div><button class="button">保存</button></div>
+</div>
+
+<!-- 实时和统计切换-->
+<div class="change-menu">
+    <span class="active">实时</span>
+    <span class="total">统计</span>
+</div>
+
+<section>
+    <div class="maskkk"></div>
+    <div class="no-access">
+        <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+    </div>
+</section>
+
+<section>
+    <div class="maskk"></div>
+    <div class="no-data">
+        <p>数据加载失败，请刷新页面</p>
+        <button type="button" onclick="uploadPage()">刷新</button>
+    </div>
+</section>
+
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/echarts.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/datePicker.js"></script>
+<script src="/js/teacherDormCheck.js"></script>
+</html>

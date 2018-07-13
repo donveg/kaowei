@@ -1,0 +1,42 @@
+<html>
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/base.js"></script>
+    <script>
+	
+        returnData = getApi(getTokenUrl+'/index/mct?code='+GetQueryString("code"));
+       
+        if(returnData.code == 1){
+            window.location.href = '/bind-account.html';
+        }else if(returnData.code == 200){ //已绑定账号
+			if(returnData.type == 1 || returnData.type == 3){ //学生
+				if(GetQueryString("id")==1){
+					window.location.href = '/stuSchedule.html';
+				}else if(GetQueryString("id")==2){
+					window.location.href = '/punchClock.html';
+				}else if(GetQueryString("id")==3){
+					window.location.href = '/setting-info.html';
+				}else if(GetQueryString("id")==4){
+					window.location.href = 'stuDormClock.html';
+				}
+			  
+			}else if(returnData.type == 2){
+			if(GetQueryString("id")==1){
+					window.location.href = '/teacherSchedule.html';
+				}else if(GetQueryString("id")==2){
+					window.location.href = '/teacherCheck.html';
+				}else if(GetQueryString("id")==3){
+					window.location.href = '/setting-info-teacher.html';
+				}else if(GetQueryString("id")==4){
+				window.location.href = '/teacherDormCheck.html';
+			}
+			}else if(returnData.type == 10)
+			{
+				window.location.href = '/dormCheck.html';
+			}
+		}
+
+        sessionStorage.setItem("access_token",returnData.token);
+        sessionStorage.setItem("code",returnData.tok);
+		sessionStorage.setItem("id",GetQueryString("id"));
+    </script>
+</html>

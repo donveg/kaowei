@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>个人信息</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stu-setting.css" />
+</head>
+<body>
+    <!--个人信息-->
+    <section class="info-list">
+        <div class="info-list-part1">
+            <p class="head-img">头像:<span class="info-img"><img src="images/head.png"></span></p>
+            <p>姓名:<span class="info-realname">刘天天</span></p>
+            <p>性别:<span class="info-sex">男</span></p>
+            <p>学校:<span class="info-school">成都市外国语学院附中</span></p>
+            <p>地址:<span class="info-address">成都市外国语学院附中</span></p>
+        </div>
+
+        <div class="info-list-part2">
+            <p>用户名:<span class="info-username">laoshi</span></p>
+            <p>手机号:<span class="info-phone">18763927665</span></p>
+            <p>邮箱:<span class="info-email">liutiantian@sina.com</span></p>
+            <!--<a href="change-pass.html"><p>密码:<span><img src="images/common-ic-more.png"></span></p></a>-->
+        </div>
+
+        <!-- 解除绑定失败-->
+        <section>
+            <span id="unbind">解除绑定失败</span>
+        </section>
+
+        <div class="info-list-part3">
+            <button id="loginOut">注销账号</button>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="maskk"></div>
+        <div class="no-access">
+            <p>您的账号暂未开通考勤、排课服务。 请联系本校教师或拨打服务热线</p>
+        </div>
+    </section>
+    <!--选课-->
+</body>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/setting.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/setting-info-house.js"></script>
+</html>

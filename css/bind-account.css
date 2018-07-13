@@ -1,0 +1,109 @@
+/*绑定账号*/
+.bind-account-box{
+    background: url("../images/banner.png")no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 10rem;
+}
+.bind-account-box .logo-img{
+    width: 7rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.bind-account-box .logo-img img{
+    width: 100%;
+}
+.form-box-white{
+    width: 86%;
+    margin-left: 7%;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.form-box-white p{
+    position: relative;
+    height: 2rem;
+}
+.form-box-white .user i{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    background: url("../images/common-ic-user@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+}
+.form-box-white .pass i{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    background: url("../images/common-ic-password@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+}
+.form-box-white input{
+
+    /*height: 2rem;*/
+    /*line-height: 2rem;*/
+    width: 90%;
+    margin-left: 5%;
+    padding: 0.57rem 0;
+    margin-left: 5%;
+    border: none;
+    padding-left: 1.2rem;
+    font-size: 0.6rem;
+    border-bottom: 0.01rem solid #eee;
+    outline: none;
+    vertical-align: middle;
+}
+.form-box-white p:last-child input{
+    border-bottom: none;
+}
+.bind-mess{
+    text-align: center;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.5rem;
+    color: #999;
+}
+.bind-btn{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5rem;
+}
+
+.bind-btn button[disabled='disabled']{
+    background: #c1c1c1;
+}
+.bind-btn button{
+    width: 90%;
+    height: 2rem;
+    line-height: 2rem;
+    outline: none;
+    border: none;
+    background: #3699ED;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 5%;
+    color: #fff;
+    font-size: 0.75rem;
+}
+.error-info{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #F06B69;
+}
